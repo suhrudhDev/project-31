@@ -5,7 +5,7 @@ var Engine = Matter.Engine,
  
 var particles = [];
 var plinkos = [];
-var divisions = [];
+var divisions=[];
 var divisionHeight=300;
 function setup() {
   createCanvas(800, 800);
@@ -19,19 +19,19 @@ function setup() {
    }
 
 
-    for (var j = 40; j <=width; j=j+50) 
+    for (var j = 75; j <=width; j=j+50) 
     {
     
        plinkos.push(new Plinko(j,75));
     }
 
-    for (var j = 70; j <=width-10; j=j+50) 
+    for (var j = 50; j <=width-10; j=j+50) 
     {
     
        plinkos.push(new Plinko(j,175));
     }
 
-     for (var j = 40; j <=width; j=j+50) 
+     for (var j = 75; j <=width; j=j+50) 
     {
     
        plinkos.push(new Plinko(j,275));
@@ -52,8 +52,7 @@ function setup() {
 
 function draw() {
   background("black");
- 
-  Engine.update(engine);
+    Engine.update(engine);
  
   
    for (var i = 0; i < plinkos.length; i++) {
@@ -73,6 +72,4 @@ function draw() {
      
      divisions[k].display();
    }
-
-   
 }
